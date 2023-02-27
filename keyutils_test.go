@@ -38,9 +38,9 @@ func TestImportFailed(t *testing.T) {
 }
 
 func TestExport(t *testing.T) {
-	t.Log(keys.ExportPrivateKey("123", "./"))
+	t.Log(keys.ExportPrivateKey("", "./"))
 }
 
 func TestExportString(t *testing.T) {
-	t.Log(keys.ExportKeysString("123", "./"))
+	t.Log(keys.ExportKeysString("", "./"))
 }

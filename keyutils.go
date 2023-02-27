@@ -53,6 +53,7 @@ func ExportKeysString(password, path string) (publicKey, privateKey string, err 
 		return "", "", err
 	}
 	publicKey = hex.EncodeToString(addr)
-	privateKey = hex.EncodeToString(pk.D.Bytes())
+
+	privateKey = hex.EncodeToString(crypto.EncodeSecp256k1PrivateKey(pk))
 	return publicKey, privateKey, nil
 }
